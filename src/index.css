@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.active {
+  /* text-decoration: underline; */
+  background-color:#1ABC9C ;
+  color:white;
+  padding:5px;
+  border-radius: 3px;
+}
+.head::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f005";
+  position: absolute;
+  font-weight: 900;
+  right: 50%;
+  bottom: 2px;
+  transform: translate(50%, 50%);
+}
+.head::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 170px;
+  right: 50%;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  background-color: white;
+}
+/* -------------------------------------- */
+.portfolio .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.portfolio .content .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  display: none;
+
+}
+.portfolio .content .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #19ab8e;
+
+  display: none;
+}
+.portfolio .content .card:hover::after {
+  transition: all 0.5s;
+display: block;
+}
+.portfolio .content  .card:hover .icon {
+  display: block;
+}
+/* ---------------- */
+input:focus{
+  border: none;
+  outline: none;
+}
