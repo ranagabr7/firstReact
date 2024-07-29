@@ -15,7 +15,7 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { path: "*", element: <h1>4 0 4 NOT FOUND PAGE</h1> },
+        { path: "*", element: <Home/>},
         { path: "index", element: <Home /> },
         { path: "/home", element: <Home /> },
         { path: "/about", element: <About /> },
